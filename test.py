@@ -43,7 +43,7 @@ try:
                 continue  # Skip if the data is not a valid number
 
             if len(n) == 2:
-                if n[0] >= y_data[index-1] and n[1] >= gyalogos_data[index-1]:
+                if (n[0] == 0 and n[1]==0) or (n[0] >= y_data[index-1] and n[1] >= gyalogos_data[index-1]):
                     print(f"Jo adat: {n}")
                     x_data.append(index)
                     y_data.append(n[0])
